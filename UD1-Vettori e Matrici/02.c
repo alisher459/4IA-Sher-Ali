@@ -6,7 +6,7 @@ int main() {
     float min, somma = 0, media, cerca;
     int conteggio = 0;
 
-    printf("ANALISI ARRAY ALTEZZE\n");
+    printf("arrey altezze\n");
 
     min = altezze[0];
     for (int i = 0; i < n; i++) {
