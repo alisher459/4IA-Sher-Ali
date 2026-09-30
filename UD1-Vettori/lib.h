@@ -1,39 +1,4 @@
 
-/*
-/** Stampa i valori dell'array in colonna con indice di cella.
- * @param int* Riferimento al vettore da riempire.
- * @param int Dimensione dell'Array.
- 
-void printColArray(int _v[], int _dim);
-
-
-/** Stampa su singola riga i valori del vettore.
- * @param int* Riferimento al vettore da riempire.
- * @param int Dimensione dell'Array.
- 
-void printRowArray(int _v[], int _dim);
-
-
-/** Assegna ad ogni cella di un array un valore random tra 1 e 99.
- * @param int* Riferimento al vettore da riempire.
- * @param int Dimensione dell'Array.
-
-void randomInputArray(int _v[], int _dim);
-
-
-/** Assegna ad ogni cella di un array un valore richiesto in input.
- * @param int* Riferimento al vettore da acquisire.
- * @param int Dimensione dell'Array.
- 
-void manualInputArray(int _v[], int _dim);
-
-
-/** Azzera tutte le celle di un array.
- * @param int* Riferimento al vettore da inizializzare
- * @param int Dimensione dell'Array.
- 
-void initArray(int _v[], int _dim);
-*/
 /** fornisce il valore massimo in un vettore
  * @param int* Riferimento al vettore da inizializzare
  * @param int Dimensione dell'Array.
@@ -55,6 +20,32 @@ int ContaValore(int v[],int dim,int choose);
  */
 int ricercaSostituisci(int v[],int dim,int src,int sost);
 
+/** carica un vettore con valori random compresi tra un minimo e un massimo 
+ * @param int* Riferimento al vettore da riempire
+ * @param int Dimensione del vettore
+ * @param int valore massimo
+ * @param int valore minimo
+ */
+void caricaVettore(int v[],int dim,int min,int max);
+
+/** visualizza vettore su singola riga
+ * @param int* Riferimento al vettore da riempire
+ * @param int Dimensione del vettore
+ */
+void StampaVettoreRigha(int v[],int dim);
+
+/** Calcola e restituisce la media del vettore
+ * @param int* Riferimento al vettore da riempire
+ * @param int Dimensione del vettore
+ * @return valore medio calcolato
+ */
+void MediaVettore(int v[],int dim);
+
+/** visualizza vettore su singola riga
+ * @param int* Riferimento al vettore da riempire
+ * @param int Dimensione del vettore
+ */
+void StampaVettoreRigha(int v[],int dim);
 
 
 
