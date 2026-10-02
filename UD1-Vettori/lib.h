@@ -42,10 +42,28 @@ void StampaVettoreRigha(int v[],int dim);
 void MediaVettore(int v[],int dim);
 
 /** visualizza vettore su singola riga
- * @param int* Riferimento al vettore da riempire
+ * @param int* Riferimento al vettore 
  * @param int Dimensione del vettore
  */
 void StampaVettoreRigha(int v[],int dim);
+
+/** restituisce il valore all'indice selezionato
+ * @param int* Riferimento al vettore 
+ * @param int Dimensione del vettore
+ * @param int e l'indice indicato
+ */
+int getvaloreat(int v[],int dim,int index);
+
+/** stampa un sotto array identificato tra index1 e index2
+ * @param int* Riferimento al vettore 
+ * @param int Dimensione del vettore
+ * @param int indice iniziale
+ * @param int indice finale
+ * @return true se stampa e possibile flase se la stampa non e possibile
+ */
+bool stampasubarray(int v[],int dim,int index1,int index2);
+
+
 
 
 

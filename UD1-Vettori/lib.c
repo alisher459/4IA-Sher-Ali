@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "lib.h"
+#include <stdbool.h>
 void stampaVettore(int v[], int dim) {
     printf("\n--- Stampa valori in colonna ---\n");
     for (int i = 0; i < dim; i++) {
@@ -64,3 +65,13 @@ void MediaVettore(int v[],int dim){
     media = media / dim;
     return media;
 }
+
+int getvaloreat(int v[],int dim,int index){
+    return v[index];
+}
+
+bool stampasubarray(int v[],int dim,int index1,int index2){
+    
+}
+
+
