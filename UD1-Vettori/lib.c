@@ -70,8 +70,6 @@ int getvaloreat(int v[],int dim,int index){
     return v[index];
 }
 
-bool stampasubarray(int v[],int dim,int index1,int index2){
-    
-}
+
 
 

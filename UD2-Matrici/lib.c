@@ -14,3 +14,15 @@ void StampaMatrice(int righe, int colonne, int m[righe][colonne]) {
         printf(" ] ");
         printf("\n"); 
     }
+}
+
+void caricamatrice(int righe,int colonne,int m[righe][colonne]){
+    int i,j;
+    srant(time(NULL));
+    for(int i = 0 ; i < righe ; i++){
+        for(int j = 0 ; j < righe ; j++){
+             m[righe][colonne] = 1 + rand() % 25;
+    }
+    }
+}
+

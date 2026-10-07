@@ -63,7 +63,14 @@ int getvaloreat(int v[],int dim,int index);
  */
 bool stampasubarray(int v[],int dim,int index1,int index2);
 
-
+/** ordina vettore in modo crescente e decrescente
+ * @param int* Riferimento al vettore 
+ * @param int Dimensione del vettore
+ * @param int modo ordinato
+ * @return true se stampa e possibile flase se la stampa non e possibile
+ */
+void ordinavettore(int v[],int dim,int mode);
+ 
 
 
 
