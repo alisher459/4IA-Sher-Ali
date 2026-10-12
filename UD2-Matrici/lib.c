@@ -47,13 +47,19 @@ void SommaRighe(int righe, int colonne, int m[righe][colonne]) {
     }
 }
 
-bool verificaVettoreInMatrice(int righe, int colonne, int matrice[righe][colonne], int vettore[]) {
-    for (int i = 0; i < righe; i++) {
-        for (int j = 0; j < colonne; j++) {
-            if (matrice[i][j] != vettore[j]) {
-                return true;
-            }
-        }
-    return false;
+void creaCodiceSegretO(int v[],int dim,int min,int max){
+    srand(time(NULL));
+    for(int i = 0; i < dim; i++){
+        v[i] = min + rand() % (max - min + 1);
+    }
 }
 
+void RichiediUtente(int code){
+    printf("forniere il codice di 5 cifre \n");
+    scanf("%d",&code);
+}
+
+verificaStampaCodice(int v[],int dim,int min,int max){
+
+
+}

@@ -23,3 +23,11 @@ void caricamatrice(int righe,int colonne,int m[righe][colonne]);
  * @return valore medio
  */
 int Mediomatrice(int righe,int colonne,int m[righe][colonne]);
+
+/*
+  Realizzare quindi il gioco per funzioni:
+    - creaCodiceSegreto.
+    - richiediCodiceUtente.
+    - verificaStampaCodice.
+    il tutto inserito in un ciclo do-while per la ripetizione finche codice non è esatto.
+*/
