@@ -3,6 +3,7 @@
 #include <time.h>
 #include "lib.h"
 #include <stdbool.h>
+/*
 void stampaVettore(int v[], int dim) {
     printf("\n--- Stampa valori in colonna ---\n");
     for (int i = 0; i < dim; i++) {
@@ -69,7 +70,12 @@ void MediaVettore(int v[],int dim){
 int getvaloreat(int v[],int dim,int index){
     return v[index];
 }
+*/
 
-
-
+// i primi due elementi di un vettore sono 0 e 1; riempire i rimanenti con la somma dei due elementi precedenti
+void Fibonacci(int DIM,int v[DIM]){
+    for(int i = 2; i < DIM; i++){
+        v[i] = v[i - 1] + v[i - 2];
+    }
+}
 

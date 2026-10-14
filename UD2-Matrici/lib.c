@@ -315,3 +315,14 @@ bool constantBordersM(int righe,int colonne,int v[righe][colonne],int m[righe]){
     }
     return true;
 }
+
+//riempire una matrice quadrata 10 x 10 di interi con la tavola pitagorica, per esempio nella seconda riga ci stanno: 2, 4, ..., 20
+void pitagoricaM(int quad,int v[quad][quad]){
+    for(int i = 0; i < quad; i++){
+        for(int j = 0; j < quad; j++){
+            for(int c = 0; c < 10; c++){
+                v[j][i] = i * c;
+            }
+        }
+    }
+}
