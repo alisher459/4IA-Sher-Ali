@@ -256,3 +256,62 @@ bool largestRowM(int righe,int colonne,int v[righe][colonne]){
     }
     return true;
 }
+
+//verificare se una matrice ha tutte le righe uguali
+bool equalRowsM(int righe,int colonne,int v[righe][colonne],int m[righe]){
+    for(int i = 0; i < colonne; i++){
+        m[i] = v[0][i];
+    }
+    for(int i = 0; i < righe; i++){
+        for(int j = 0; j < colonne;j++){
+            if(m[j] != v[i][j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+// dice se tutti gli elementi di una matrice sono divers
+bool allDifferentM(int righe,int colonne,int v[righe][colonne],int m[righe]){
+    for(int i = 0; i < righe; i++){
+        for(int j = 0; j < colonne; j++){
+            for(int i1 = 0; i1 < righe; i1++){
+                for(int j1 = 0; j1 < colonne; j1++){
+                    if(i != i1 && j1 != j){
+                        if(v[i][j] == v[i1][j1]){
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return true;
+}
+
+//verificare se tutte le celle dei “bordi” di una matrice contengono lo stesso valore
+bool constantBordersM(int righe,int colonne,int v[righe][colonne],int m[righe]){
+    int check = v[0][0];
+    for(int i = 0; i < colonne; i++){
+        if(check != v[0][i]){
+            return false;
+        }
+    }
+    for(int i = (colonne - 1); i < 0; i++){
+        if(check != v[0][i]){
+            return false;
+        }
+    }
+    for(int i = 0; i < righe; i++){
+        if(check != v[i][0]){
+            return false;
+        }
+    }
+    for(int i = (righe - 1); i < 0; i++){
+        if(check != v[i][0]){
+            return false;
+        }
+    }
+    return true;
+}
