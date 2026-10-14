@@ -155,3 +155,104 @@ bool diagSumdiagonaleMaggioreMM(int quad,int v[quad][quad]){
         return false;
     }
 }
+//sopra sbagliato correggere dopo
+ 
+//La funzione deve restituire 1 se almeno una riga della matrice è composta interamente da numeri maggiori di zero, altrimenti deve restituire 0.
+bool matricePositivaM(int righe,int colonne,int v[righe][colonne]){
+    int check = 0;
+    for(int i = 0; i < righe; i++){
+        for(int j = 0; j < colonne; j++){
+            if(v[i][j] < check){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+//La funzione deve restituire 1 se almeno una colonna della matrice è composta interamente da numeri pari, altrimenti deve restituire 0.
+bool colonnapariM(int righe,int colonne,int v[righe][colonne]){
+    for(int j = 0; j < colonne;j++){
+        int pari = 0;
+        for(int i = 0; i < righe; i++){
+            if(v[i][j] % 2 != 0){
+                pari = 0;
+            }
+        }
+        if(pari = 1){
+            return true;
+        }
+    }
+    return false;
+}
+
+//La funzione deve restituire 1 se almeno una colonna della matrice contiene almeno uno zero, altrimenti deve restituire 0
+bool colonnazeriM(int righe,int colonne,int v[righe][colonne]){
+    for(int j = 0; j <  colonne; j++){
+        int check = 0;
+            for(int i = 0; i < righe; i++){
+                if(v[i][j] == 0){
+                    check = 1;
+                }
+            }
+            if(check == 1){
+                return true; 
+            }
+    }
+    return false;
+}
+
+//La funzione deve restituire 1 se tutti e quattro gli angoli della matrice hanno esattamente lo stesso valore, altrimenti deve restituire 0.
+bool cornersequalM(int righe,int colonne,int v[righe][colonne]){
+    int check = v[0][0];
+    if(v[0][0] == check && v[0][colonne - 1] == check && v[righe - 1][0] == check && v[righe - 1][colonne - 1] == check){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+//La funzione deve restituire 1 se tutti gli elementi della prima riga sono esattamente uguali, uno per uno, agli elementi corrispondenti dell'ultima riga, altrimenti deve restituire 0.
+bool priamUltimaRighaUgualiM(int righe,int colonne,int v[righe][colonne]){
+    int check = 0;
+    for(int i = 0; i < colonne; i++){
+    if(v[0][i] == v[righe - 1][i]){
+        check = 1;
+    }else{
+        return false;
+    }
+    }
+    if(check == 1){
+        return true;
+    }
+}
+
+// inizializzare ogni elemento di una matrice quadrata con la differenza tra i suoi indici di riga e colonna;
+void indexesDiffM(int quad,int v[quad][quad]){
+    int diff = 0;
+    for(int i = 0; i < quad ; i++){
+        for(int j = 0; j < quad; j++){
+            if(j > i){
+                diff = j - i;
+            }else{
+                diff = i - j;
+            }
+            if(j == i){
+                diff = 0;
+            }
+            v[i][j] = diff;
+        }
+    }
+}
+
+//dire se in ogni colonna di una matrice, l'ultimo elemento è maggiore di tutti gli altri della colonna
+bool largestRowM(int righe,int colonne,int v[righe][colonne]){
+    for(int j = 0; j < colonne; j++){
+        for(int i = 0; i < (righe - 1); i++){
+            if(v[righe - 1][j] < v[i][j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
