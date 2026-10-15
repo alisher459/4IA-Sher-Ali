@@ -318,11 +318,46 @@ bool constantBordersM(int righe,int colonne,int v[righe][colonne],int m[righe]){
 
 //riempire una matrice quadrata 10 x 10 di interi con la tavola pitagorica, per esempio nella seconda riga ci stanno: 2, 4, ..., 20
 void pitagoricaM(int quad,int v[quad][quad]){
-    for(int i = 0; i < quad; i++){
-        for(int j = 0; j < quad; j++){
-            for(int c = 0; c < 10; c++){
-                v[j][i] = i * c;
+    for(int i = 1; i < quad; i++){
+        for(int j = 1; j < quad; j++){
+                v[j][i] = i * j;
+        }
+    } 
+}
+
+//Verificare se l'ultimo elemento di tutte le righe e maggior
+bool rogheMaggiori(int righe,int colonne,int v[righe][colonne]){
+    for(int i = 0; i < righe; i++){
+        for(int j = 0; j < (colonne - 2); j++){
+            if(v[i][colonne - 1] < v[i][j]){
+                return false;
             }
         }
     }
+    return true;
+}
+
+//verfiicare se i bordi della matrice sono uguali a v
+bool corniceUgualeM(int righe,int colonne,int v,int v[righe][colonne]){
+    for(int i = 0; i < righe; i++){
+        for(int j = 0; j < (colonne - 2); j++){
+            if(i = 0 || j = 0 || i = (righe - 1) || j = (colonne - 1)){
+                if(v[i][j] != v){
+                return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
+//all'interno del vettore calcola il prodotto dei valori dispari maggori di 0
+bool dispariVettore(int dim,int v[dim]){
+    int prodotto = 1;
+    for(int i = 0; i < dim; i++){
+        if(v[i] > 0 && v[i] % 3 == 0){
+            prodotto = prodotto * v[i];
+        }
+    }
+    return prodotto;
 }
