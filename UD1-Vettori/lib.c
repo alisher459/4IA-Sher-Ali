@@ -72,10 +72,5 @@ int getvaloreat(int v[],int dim,int index){
 }
 */
 
-// i primi due elementi di un vettore sono 0 e 1; riempire i rimanenti con la somma dei due elementi precedenti
-void Fibonacci(int DIM,int v[DIM]){
-    for(int i = 2; i < DIM; i++){
-        v[i] = v[i - 1] + v[i - 2];
-    }
-}
+
 

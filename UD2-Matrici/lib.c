@@ -3,65 +3,41 @@
 #include <time.h>
 #include "lib.h"
 #include<stdbool.h>
-//---SCUOLA---//
-/*
-void StampaMatrice(int righe, int colonne, int m[righe][colonne]) {
-    for (int i = 0; i < righe; i++) {
-        for (int j = 0; j < colonne; j++) {
-            if(i == 0){
-                 printf(" [ ");
-            }
-            printf("%d ", m[i][j]);
-        }
-        printf(" ] ");
-        printf("\n"); 
-    }
-}
-
-void caricamatrice(int righe,int colonne,int m[righe][colonne]){
-    int i,j;
-    srant(time(NULL));
-    for(int i = 0 ; i < righe ; i++){
-        for(int j = 0 ; j < righe ; j++){
-             m[righe][colonne] = 1 + rand() % 25;
-    }
-    }
-}
-
-float MediaMatrice(int righe, int colonne, int m[righe][colonne]) {
-    int som = 0;
+//---CASA PRADELLA---//
+//Carica una matrice con valori random compresi tra 1 e 25
+void caricaM(int righe, int colonne, int v[righe][colonne],int min ,int max){
+    srand(time(NULL));
     for(int i = 0; i < righe; i++){
         for(int j = 0; j < colonne; j++){
-            som += m[i][j];
+            v[i][j] = rand() % (max - min + 1) + min;
         }
     }
-    return (float) som / (righe * colonne);
 }
 
-void SommaRighe(int righe, int colonne, int m[righe][colonne]) {
-    for(int i = 0; i < righe; i++) {
-        int som = 0;
-        for(int j = 0; j < colonne; j++) {
-            som += m[i][j];
+void stampaM(int righe, int colonne, int v[righe][colonne]){
+    for(int i = 0; i < righe; i++){
+        for(int j = 0; j < colonne; j++){
+            printf(" %d", v[i][j]);
         }
-        printf("La somma della riga %d e': %d\n", i, som);
+        printf("\n");
+    }
+} 
+
+void caricaMatriceScacchiera(int righe, int colonne, int v[righe][colonne]){
+    int carica = 0;
+    for(int i = 0; i < righe; i++){
+        for(int j = 0; j < colonne; j++){
+            if((i && j) == 0){
+                v[i][j] == 0;
+            }
+            if(v[])
+        }
     }
 }
 
-void creaCodiceSegretO(int v[],int dim,int min,int max){
-    srand(time(NULL));
-    for(int i = 0; i < dim; i++){
-        v[i] = min + rand() % (max - min + 1);
-    }
-}
-
-void RichiediUtente(int code){
-    printf("forniere il codice di 5 cifre \n");
-    scanf("%d",&code);
-}
-*/
-
-//Che prende in input una matrice di interi e le sue dimensioni, e restituisce il numero di elementi pari presenti nella matrice.
+//---CASA BOTTONI---//
+/*
+//Cheprende in input una matrice di interi e le sue dimensioni, e restituisce il numero di elementi pari presenti nella matrice.
 int contaPariM(int i,int j,int v[i][j]) {
     int pari = 0;
     for(int ii = 0; ii < i; ii++){
@@ -355,9 +331,12 @@ bool corniceUgualeM(int righe,int colonne,int v,int v[righe][colonne]){
 bool dispariVettore(int dim,int v[dim]){
     int prodotto = 1;
     for(int i = 0; i < dim; i++){
-        if(v[i] > 0 && v[i] % 3 == 0){
+        if(v[i] > 0 && v[i] % 2 != 0){
             prodotto = prodotto * v[i];
         }
     }
     return prodotto;
 }
+*/
+
+
