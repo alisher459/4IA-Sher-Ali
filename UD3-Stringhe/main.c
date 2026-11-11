@@ -4,12 +4,9 @@
 #include "lib.h"
 #include<stdbool.h>
 
-#define DIM 20
-
-int main(){
-    char str[DIM];
-    int junk;
-    initstringa(DIM,str);
-    printf("inserisic una parola: ");
-    scanf("&")
+#define LEN 20
+int main () {
+    char s[LEN];
+    StampaContrarioS(s);
+    return 0;
 }
